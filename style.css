@@ -72,6 +72,10 @@ body{
     align-items: center;
 }
 
+p{
+    font-size: 15px;
+}
+
 .flex-group{
     display: flex;
     gap: 1rem;
@@ -79,14 +83,21 @@ body{
 }
 
 .product{
-    --content-padding: 1.5rem;
-    --content-spacing: 1rem; /*redefinir quando terminar*/
+    --content-padding: 1.6rem;
+    --content-spacing: 0.9rem; /*redefinir quando terminar*/
 
     display: grid;
     background-color: var(--White);
     border-radius: 0.5rem;
     overflow: hidden;
     margin: 0 1rem;
+    max-width: 600px;
+}
+
+@media (min-width: 600px){
+    .product{
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .product__content{
@@ -97,8 +108,9 @@ body{
 }
 
 .product__category{
+    font-size: 0.8rem;
     font-weight: var(--fw-regular);
-    letter-spacing: 0.15rem;
+    letter-spacing: 0.2rem;
     text-transform: uppercase;
 }
 
@@ -125,11 +137,12 @@ body{
     text-decoration: none;
     border: none;
     
-    padding: 1rem;
+    padding: 0.5rem;
     background-color: var(--DarkCyan);
     border-radius: 0.5rem;
     color: var(--White);
     font-weight: var(--fw-bold);
+    font-size: 0.9rem;
 
     display: flex;
     justify-content: center;
